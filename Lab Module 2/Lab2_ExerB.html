@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSE3133 Course Feedback</title>
+</head>
+<body>
+
+    <!--
+    Part 1: Errors identified and corrected from the original code.
+    Line numbers below refer to the original given code.
+
+    Error 1 (Line 2): The html element was missing the correct
+    language attribute. Corrected to lang="en".
+
+    Error 2 (Line 5): The title element was not properly indented.
+    Corrected for readability.
+
+    Error 3 (Line 12): The navigation links used hbref instead
+    of href. Corrected both links.
+
+    Error 4 (Line 18): The Week table header used an incorrect
+    th tag. Corrected the table heading structure.
+
+    Error 5 (Line 20): The Rating heading used td instead of th.
+    Corrected to th.
+
+    Error 6 (Line 21): The table row structure was inconsistent.
+    Corrected the opening and closing tags.
+
+    Error 7 (Line 28): The colspan attribute was incorrectly
+    applied to the Topic cell. Corrected the table structure.
+
+    Error 8 (Line 30): The Week 3 row had incorrect table cells.
+    Corrected the row structure.
+
+    Error 9 (Line 38): The form action and method were incomplete
+    for a real submission workflow. Kept a PHP action as an example.
+
+    Error 10 (Line 39): The Name label had no matching for attribute.
+    Added for="fullname" and a matching input id.
+
+    Error 11 (Line 40): The input id and label association were
+    incorrect. Corrected the id and name attributes.
+
+    Error 12 (Lines 42-44): Radio buttons used different names,
+    allowing multiple ratings. All now use name="rating".
+
+    Error 13 (Line 45): The Poor label was incorrectly associated
+    with the checkbox id. Corrected to for="poor".
+
+    Error 14 (Lines 46-48): The checkbox label and input were
+    incorrectly structured. Corrected their matching id attributes.
+
+    Error 15 (Line 52): The copyright entity was written incorrectly.
+    Corrected to &copy;.
+    -->
+
+    <!-- Header section -->
+    <header>
+        <h1>CSE3133 Course Feedback</h1>
+        <p>Share your feedback to help us improve the course.</p>
+    </header>
+
+    <!-- Navigation: links to all main sections -->
+    <nav>
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <!-- Part 1 and Part 2: Feedback summary table -->
+    <section id="results">
+        <h2>Feedback Summary</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5/5</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Tables and Forms</td>
+                    <td>4.0/5</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.0/5</td>
+                </tr>
+
+                <!-- Week 4 and Week 5 cover the same Mini Project topic -->
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>4.5/5</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>4.8/5</td>
+                </tr>
+
+                <!-- Final row: Average Rating spans two columns -->
+                <tr>
+                    <td colspan="2">Average Rating</td>
+                    <td>4.4/5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Part 2: Feedback form with email, rating, checkbox and dropdown -->
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+
+        <form action="feedback.php" method="post">
+
+            <!-- Student name input -->
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <br><br>
+
+            <!-- Student email input -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <!-- Radio buttons share one name so only one can be selected -->
+            <p>Overall Rating:</p>
+
+            <input type="radio" id="good" name="rating" value="Good" required>
+            <label for="good">Good</label>
+            <br>
+
+            <input type="radio" id="average" name="rating" value="Average">
+            <label for="average">Average</label>
+            <br>
+
+            <input type="radio" id="poor" name="rating" value="Poor">
+            <label for="poor">Poor</label>
+            <br><br>
+
+            <!-- Checkbox group: students can select multiple topics -->
+            <p>Topics I want more practice on:</p>
+
+            <input type="checkbox" id="html" name="topics[]" value="HTML">
+            <label for="html">HTML</label>
+            <br>
+
+            <input type="checkbox" id="tables" name="topics[]" value="Tables">
+            <label for="tables">Tables</label>
+            <br>
+
+            <input type="checkbox" id="forms" name="topics[]" value="Forms">
+            <label for="forms">Forms</label>
+            <br>
+
+            <input type="checkbox" id="semantic" name="topics[]" value="Semantic HTML">
+            <label for="semantic">Semantic HTML</label>
+            <br><br>
+
+            <!-- Dropdown: select a section or group -->
+            <label for="group">Section/Group:</label>
+            <select id="group" name="group" required>
+                <option value="">-- Select Section/Group --</option>
+                <option value="Group A">Group A</option>
+                <option value="Group B">Group B</option>
+                <option value="Group C">Group C</option>
+                <option value="Group D">Group D</option>
+            </select>
+            <br><br>
+
+            <!-- Submit and reset controls -->
+            <button type="submit">Submit Feedback</button>
+            <button type="reset">Clear Form</button>
+
+        </form>
+    </section>
+
+    <!-- Part 2: Student Comments section with two article elements -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+
+        <!-- First student comment -->
+        <article>
+            <h3>Student: Abbas</h3>
+            <p>
+                The HTML lessons are useful and easy to understand.
+                I would like more practical exercises.
+            </p>
+        </article>
+
+        <!-- Second student comment -->
+        <article>
+            <h3>Student: Faheem</h3>
+            <p>
+                The Mini Project helped me understand how to organise
+                HTML elements and build a webpage.
+            </p>
+        </article>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 CSE3133 Course Feedback</p>
+    </footer>
+
+</body>
+</html>
+
