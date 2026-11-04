@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking - CineKampus</title>
+</head>
+
+<body>
+
+    <!-- ERROR REPORT: Errors found in the original supplied code
+    Error 1 (Line 1): Incorrect DOCTYPE declaration. Corrected to <!DOCTYPE html>.
+    Error 2 (Line 10): Span used instead of a div for the content section.
+    Error 3 (Line 11): Span inside h1 was not closed correctly.
+    Error 4 (Line 14): Incorrect paragraph closing tag. Corrected to </p>.
+    Error 5 (Line 15): Missing opening form tag and form attributes.
+    Error 6 (Line 20): Incorrect input type "emial". Corrected to "email".
+    Error 7 (Line 23-25): Datalist ID did not match the input list attribute.
+    Error 8 (Line 26): Incorrect and incomplete movie option element.
+    Error 9 (Line 32): Range minimum and maximum values were reversed.
+    Error 10 (Line 38): Output for attribute used incorrect ID "kid" instead of "child".
+    Error 11 (Line 41): Form tag was placed incorrectly.
+    Error 12 (Line 54): Incorrect copyright entity. Corrected to &copy;.
+    Error 13 (Line 55): Extra closing body and html tags.
+    Error 14: Missing required HTML structure and form method.
+    Error 15: Missing minimum values for ticket quantities.
+    -->
+
+    <!-- HEADER SECTION -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- NAVIGATION SECTION -->
+    <div id="nav">
+        <a href="#header">Home</a> |
+        <a href="#content">Book Tickets</a> |
+        <a href="#sidebar">Now Showing</a> |
+        <a href="now-showing.html">Movie Information</a>
+    </div>
+
+    <!-- MAIN CONTENT SECTION -->
+    <div id="content">
+
+        <h2>Book Your Ticket</h2>
+
+        <!-- Promotion information -->
+        <p>
+            Promotion: tickets &lt; RM10 for students &amp; staff!
+        </p>
+
+        <!-- Ticket booking form and automatic calculations -->
+        <form action="booking.php" method="post"
+            oninput="
+            total.value = adult.valueAsNumber + child.valueAsNumber;
+            price.value = (adult.valueAsNumber * 12) + (child.valueAsNumber * 8);
+            ">
+
+            <!-- Customer name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"
+                placeholder="Enter your name" required autofocus>
+            <br><br>
+
+            <!-- Customer email -->
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"
+                placeholder="example@email.com" required>
+            <br><br>
+
+            <!-- Customer phone number -->
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"
+                placeholder="012-3456789" required>
+            <br><br>
+
+            <!-- Movie show date -->
+            <label for="date">Show Date:</label><br>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <!-- Movie show time -->
+            <label for="time">Show Time:</label><br>
+            <input type="time" id="time" name="time">
+            <br><br>
+
+            <!-- Movie selection using datalist -->
+            <label for="movie">Movie:</label><br>
+            <input type="text" id="movie" name="movie"
+                list="movies" placeholder="Choose a movie">
+
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="The Mystery Island">
+            </datalist>
+            <br><br>
+
+            <!-- Adult ticket quantity -->
+            <label for="adult">Adult Tickets (RM12 each):</label><br>
+            <input type="number" id="adult" name="adult"
+                min="0" value="0">
+            <br><br>
+
+            <!-- Child ticket quantity -->
+            <label for="child">Child Tickets (RM8 each):</label><br>
+            <input type="number" id="child" name="child"
+                min="0" value="0">
+            <br><br>
+
+            <!-- Service rating -->
+            <label for="rating">Rate Our Service:</label><br>
+            <input type="range" id="rating" name="rating"
+                min="1" max="5" step="1" value="3">
+            <br><br>
+
+            <!-- Automatic total ticket calculation -->
+            <p>
+                Total Tickets:
+                <output name="total" for="adult child">0</output>
+            </p>
+
+            <!-- Automatic total ticket price calculation -->
+            <p>
+                Total Price: RM
+                <output name="price" for="adult child">0</output>
+            </p>
+
+            <!-- Submit booking form -->
+            <input type="submit" value="Book Now">
+
+        </form>
+
+    </div>
+
+    <!-- SIDEBAR SECTION: NOW SHOWING -->
+    <div id="sidebar">
+
+        <h2>Now Showing</h2>
+
+        <ul>
+            <li>
+                <strong>Space Rangers</strong>
+                <span> (PG)</span>
+                <a href="https://www.youtube.com/results?search_query=Space+Rangers+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span> (U)</span>
+                <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>The Mystery Island</strong>
+                <span> (13+)</span>
+                <a href="https://www.youtube.com/results?search_query=Mystery+Island+movie+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div id="footer">
+
+        <p>
+            e-Ticket&reg; - Campus Cinema &lt; RM10 every Tuesday
+        </p>
+
+        <p>
+            Contact: cinema&#64;campus.edu
+        </p>
+
+        <p>
+            &copy; 2026 CineKampus. All rights reserved.
+        </p>
+
+    </div>
+
+</body>
+</html>

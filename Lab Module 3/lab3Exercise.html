@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Exercise 3 - Contact Form</title>
+</head>
+
+<body>
+
+    <!-- 3. Header Section -->
+    <div>
+        <h1>Welcome to My Website</h1>
+        <span>Your satisfaction is our priority!</span>
+    </div>
+
+    <hr>
+
+    <!-- 4. Content Section -->
+    <div>
+
+        <!-- Contact Form -->
+        <h2>Contact Form</h2>
+
+        <form>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+            <br><br>
+
+            <label for="date">Preferred Contact Date:</label><br>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <label for="satisfaction">Satisfaction Level:</label><br>
+            <input type="range" id="satisfaction"
+                   name="satisfaction" min="0" max="10">
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <!-- Inline Calculator -->
+        <div>
+            <h2>Simple Calculator</h2>
+
+            <label for="num1">First Number:</label>
+            <input type="number" id="num1">
+            <br><br>
+
+            <label for="num2">Second Number:</label>
+            <input type="number" id="num2">
+            <br><br>
+
+            <button type="button" onclick="calculateSum()">
+                Calculate Sum
+            </button>
+
+            <p>
+                Total Sum:
+                <output id="result">0</output>
+            </p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- 5. Footer Section -->
+    <div>
+        <h2>Contact Information</h2>
+
+        <p>Email: s80806@ocean.umt.edu.my</p>
+        <p>Phone: 019-8765432</p>
+
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript for Calculator -->
+    <script>
+        function calculateSum() {
+
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let sum = num1 + num2;
+
+            document.getElementById("result").value = sum;
+        }
+    </script>
+
+</body>
+</html>

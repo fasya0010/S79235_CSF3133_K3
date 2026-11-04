@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page information and browser settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBake Online Order Page</title>
+</head>
+
+<body>
+
+    <!-- 1. HEADER SECTION -->
+    <div id="header">
+        <h1>CampusBake&reg;
+            <span> - Freshly Baked, Happily Made!</span>
+        </h1>
+        <p>Welcome to our campus bakery!</p>
+    </div>
+
+    <!-- 2. NAVIGATION SECTION -->
+    <div id="nav">
+        <a href="#header">Home</a> |
+        <a href="#content">Order Now</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#footer">Contact</a>
+    </div>
+
+    <!-- 3. MAIN CONTENT SECTION -->
+    <div id="content">
+
+        <!-- Introduction paragraph with inline elements -->
+        <h2>Welcome to CampusBake!</h2>
+
+        <p>
+            Enjoy our <strong>freshly baked</strong> products made
+            with <em>love and care</em>.
+            We offer <span>delicious cakes and pastries</span>
+            at affordable prices.
+            <a href="#sidebar">Check our price list</a> before ordering!
+        </p>
+
+        <!-- Customer order form -->
+        <h2>Online Order Form</h2>
+
+        <div id="order-form">
+
+            <!-- Main form with automatic price calculation -->
+            <form action="#" method="post"
+                oninput="total.value = (cupcakes.valueAsNumber * 3) + (slices.valueAsNumber * 5)">
+
+                <!-- Customer name input -->
+                <label for="name">Customer Name:</label><br>
+                <input type="text" id="name" name="name"
+                    placeholder="Enter your full name"
+                    required autofocus>
+                <br><br>
+
+                <!-- Phone number input -->
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"
+                    placeholder="012-3456789" required>
+                <br><br>
+
+                <!-- Email input -->
+                <label for="email">E-mail Address:</label><br>
+                <input type="email" id="email" name="email"
+                    placeholder="example@email.com" required>
+                <br><br>
+
+                <!-- Pick-up date input -->
+                <label for="date">Pick-up Date:</label><br>
+                <input type="date" id="date" name="date">
+                <br><br>
+
+                <!-- Pick-up time input -->
+                <label for="time">Pick-up Time:</label><br>
+                <input type="time" id="time" name="time">
+                <br><br>
+
+                <!-- Cake flavour selection using datalist -->
+                <label for="flavour">Choose Cake Flavour:</label><br>
+                <input type="text" id="flavour" name="flavour"
+                    list="flavours" placeholder="Select a flavour">
+
+                <datalist id="flavours">
+                    <option value="Chocolate">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Red Velvet">
+                    <option value="Blueberry">
+                </datalist>
+                <br><br>
+
+                <!-- Icing colour selection -->
+                <label for="icing">Choose Icing Colour:</label><br>
+                <input type="color" id="icing" name="icing"
+                    value="#ff69b4">
+                <br><br>
+
+                <!-- Sweetness level slider -->
+                <label for="sweetness">Sweetness Level (1-5):</label><br>
+                <input type="range" id="sweetness" name="sweetness"
+                    min="1" max="5" step="1" value="3">
+                <br><br>
+
+                <!-- 4. PRICE CALCULATOR SECTION -->
+                <h2>Price Calculator</h2>
+
+                <!-- Cupcake quantity: RM 3.00 each -->
+                <label for="cupcakes">Cupcakes (RM 3.00 each):</label><br>
+                <input type="number" id="cupcakes" name="cupcakes"
+                    min="0" value="0">
+                <br><br>
+
+                <!-- Cake slice quantity: RM 5.00 each -->
+                <label for="slices">Cake Slices (RM 5.00 each):</label><br>
+                <input type="number" id="slices" name="slices"
+                    min="0" value="0">
+                <br><br>
+
+                <!-- Display automatically calculated total -->
+                <p>
+                    Total Price: RM
+                    <output name="total" for="cupcakes slices">0</output>
+                </p>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit Order">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- 5. SIDEBAR SECTION: PRICE LIST -->
+    <div id="sidebar">
+
+        <h2>Price List</h2>
+
+        <ul>
+            <li>Chocolate Cake - RM 8.00</li>
+            <li>Vanilla Cupcake - RM 5.00</li>
+            <li>Strawberry Muffin - RM 6.00</li>
+            <li>Red Velvet Cake - RM 10.00</li>
+            <li>Blueberry Tart - RM 7.00</li>
+        </ul>
+
+        <!-- HTML entities examples -->
+        <p>Orders &gt; 10 pieces get a free drink!</p>
+        <p>Every order includes&nbsp;careful packaging.</p>
+
+    </div>
+
+    <!-- 6. FOOTER SECTION -->
+    <div id="footer">
+
+        <p>&copy; 2026 CampusBake. All Rights Reserved.</p>
+        <p>Contact us: fnrfasya05@gmail.com</p>
+
+    </div>
+
+    <!-- 7. TESTING OBSERVATIONS -->
+    <!--
+    Testing Observation:
+
+    1. When clicking Submit with all required fields empty,
+       the browser displays a validation message asking the
+       user to fill in the required fields.
+
+    2. When entering "myemail" in the email field and clicking
+       Submit, the browser displays an error message because
+       "myemail" is not a valid email address.
+
+    3. The browser prevents the form from being submitted
+       until the required fields contain valid information.
+
+    4. The price calculator automatically updates the total
+       when the cupcake or cake slice quantity is changed.
+    -->
+
+</body>
+</html>
