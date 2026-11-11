@@ -1,0 +1,196 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f1ed;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #574638;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #8b735f;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* Link States */
+nav ul li a:hover {
+    color: #ffd699;
+    text-decoration: underline;
+}
+
+nav ul li a:visited {
+    color: #e5d6c8;
+}
+
+nav ul li a:active {
+    color: yellow;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #76563d;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+article h3 {
+    color: #8b735f;
+    margin-bottom: 10px;
+}
+
+/* Hobbies List */
+section ul {
+    margin-left: 25px;
+}
+
+/* Video */
+figure {
+    text-align: center;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777777;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form > label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.options label {
+    margin-right: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Submit Button */
+button {
+    background-color: #76563d;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #a17c5c;
+}
+
+/* Footer */
+footer {
+    background-color: #574638;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main {
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .options {
+        gap: 5px;
+    }
+}

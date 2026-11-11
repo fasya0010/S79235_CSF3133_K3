@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visit Terengganu</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .page-intro {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        #welcome {
+            background-color: lightcyan;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Discover Terengganu</h1>
+        <p>Beautiful Islands, Culture and Nature</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#trip">Plan Your Trip</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <h2>Welcome to Terengganu</h2>
+
+        <p class="page-intro">
+            Discover the beauty of Terengganu, a beautiful state
+            in Malaysia famous for its islands, beaches, traditional
+            culture and delicious local food. Enjoy an unforgettable
+            holiday experience with your family and friends.
+        </p>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+
+        <article class="card">
+            <h3>Redang Island</h3>
+            <p>
+                Redang Island is famous for its crystal-clear water,
+                beautiful beaches and amazing marine life.
+            </p>
+            <p class="price">
+                <span class="old-price">RM 299</span>
+                RM 199
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Perhentian Islands</h3>
+            <p>
+                Enjoy snorkelling, diving and relaxing on the
+                beautiful beaches of Perhentian Islands.
+            </p>
+            <p class="price">
+                <span class="old-price">RM 350</span>
+                RM 250
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Kapas Island</h3>
+            <p>
+                Kapas Island is famous for its white sandy beaches,
+                crystal-clear water and peaceful tropical atmosphere.
+                Visitors can enjoy swimming, snorkelling and relaxing.
+            </p>
+            <p class="price">
+            <span class="old-price">RM 180</span>
+                RM 120
+            </p>
+        </article>
+
+        <!-- Meter Element -->
+        <p>Trip seats filled: 28 out of 40</p>
+        <meter min="0" max="40" value="28">
+            28 out of 40
+        </meter>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Explore Terengganu</h2>
+
+        <figure>
+            <video width="640" height="360" controls>
+                <source src="terengganu.mp4" type="video/mp4">
+
+                Your browser does not support the video tag.
+            </video>
+
+            <figcaption class="caption">
+                Discover the beautiful attractions of Terengganu.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Trip Interest Form -->
+    <section id="trip">
+        <h2>Plan Your Trip</h2>
+
+        <p>Fill in the form below to share your travel interests.</p>
+
+        <form class="trip-form">
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Traveller Type -->
+            <fieldset>
+                <legend>Traveller Type:</legend>
+
+                <input type="radio" name="traveller" value="Student">
+                Student
+
+                <input type="radio" name="traveller" value="Staff">
+                Staff
+
+                <input type="radio" name="traveller" value="Public">
+                Public
+            </fieldset>
+
+            <!-- Interests -->
+            <fieldset>
+                <legend>Interests:</legend>
+
+                <input type="checkbox" name="interest" value="Islands">
+                Islands
+
+                <input type="checkbox" name="interest" value="Food">
+                Food
+
+                <input type="checkbox" name="interest" value="Culture">
+                Culture
+
+                <input type="checkbox" name="interest" value="Nature">
+                Nature
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Visit Terengganu. All Rights Reserved.</p>
+
+        <address>
+            Contact us:
+            <a href="mailto:info@visit-terengganu.com">
+                info@visit-terengganu.com
+            </a>
+        </address>
+    </footer>
+
+</body>
+</html>

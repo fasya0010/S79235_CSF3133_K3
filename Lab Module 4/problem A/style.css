@@ -1,0 +1,198 @@
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333333;
+}
+
+/* Header */
+header {
+    background-color: #006994;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    text-decoration: overline;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #003f5c;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #00a6a6;
+}
+
+/* Link States */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: red;
+}
+
+/* Section Styling */
+section {
+    width: 90%;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#destinations {
+    background-color: #e0f7fa;
+}
+
+#video {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    color: #006994;
+}
+
+/* Destination Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #006994;
+}
+
+/* Promotion Prices */
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.old-price {
+    color: gray;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+/* Meter */
+meter {
+    width: 200px;
+    height: 20px;
+}
+
+/* Video */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-style: italic;
+    color: gray;
+}
+
+/* Trip Form */
+.trip-form {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border: 1px solid #006994;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.trip-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+fieldset {
+    margin-top: 15px;
+}
+
+button {
+    background-color: #006994;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003f5c;
+}
+
+/* Footer */
+footer {
+    background-color: #003f5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a,
+footer a:link,
+footer a:visited {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    nav li {
+        display: block;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .trip-form {
+        width: 90%;
+    }
+}

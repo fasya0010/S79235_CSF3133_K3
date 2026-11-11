@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>e-Cafe Campus</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="cafe.css">
+</head>
+
+<body>
+
+    <!--
+    DEBUGGING REPORT – Original code corrections:
+
+    1. Line 7: Replaced incorrect HTML comment syntax inside CSS
+       with a proper CSS comment.
+    2. Line 9: Changed invalid list-style-type: no to none.
+    3. Lines 14-15: Corrected the order of CSS link states.
+    4. Line 17: Changed invalid text-decoration: overlined to overline.
+    5. Line 18: Added the missing colon after the color property.
+    6. Lines 19-25: Corrected the missing closing brace in the
+       intro selector.
+    7. Lines 19-25: Added the missing dot to the highlight class selector.
+    8. Line 34: Changed href="menu" to href="#menu".
+    9. Lines 42 and 46: Replaced repeated item IDs with a class.
+    10. Line 53: Added the controls attribute to the video element.
+    11. Line 54: Corrected the video MIME type to video/mp4.
+    12. Added viewport metadata and responsive video styling.
+    13. Added a feedback form and a navigation link to the form.
+    -->
+
+    <!-- Header -->
+    <header>
+        <h1>e-Cafe Campus</h1>
+        <p>Your Favourite Campus Café</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>Welcome to e-Cafe Campus</h2>
+
+        <p class="highlight">
+            Enjoy delicious food and refreshing drinks
+            at affordable prices. We provide a comfortable
+            place for students and staff to relax and enjoy
+            their meals.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+
+        <article class="item">
+            <h3>Chicken Burger</h3>
+            <p>A delicious chicken burger with fresh vegetables.</p>
+            <p>
+                Old Price:
+                <span class="old-price">RM 12.00</span>
+            </p>
+            <p class="new-price">New Price: RM 9.00</p>
+        </article>
+
+        <article class="item">
+            <h3>Fried Rice</h3>
+            <p>Hot fried rice served with egg and vegetables.</p>
+            <p>
+                Old Price:
+                <span class="old-price">RM 10.00</span>
+            </p>
+            <p class="new-price">New Price: RM 8.00</p>
+        </article>
+
+        <article class="item">
+            <h3>Iced Chocolate</h3>
+            <p>A refreshing chocolate drink served with ice.</p>
+            <p>
+                Old Price:
+                <span class="old-price">RM 8.00</span>
+            </p>
+            <p class="new-price">New Price: RM 6.00</p>
+        </article>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Explore Our Café</h2>
+
+        <figure>
+            <video controls>
+                <source src="cafe.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <figcaption>
+                Welcome to e-Cafe Campus!
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+
+        <p>We would love to hear about your experience.</p>
+
+        <form class="feedback-form">
+
+            <!-- Customer Name -->
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName"
+                   name="customerName" required>
+
+            <!-- Customer Email -->
+            <label for="customerEmail">E-mail:</label>
+            <input type="email" id="customerEmail"
+                   name="customerEmail" required>
+
+            <!-- Visit Type -->
+            <fieldset>
+                <legend>Type of Visit:</legend>
+
+                <input type="radio" id="dineIn"
+                       name="visitType" value="Dine-in">
+                <label for="dineIn">Dine-in</label>
+
+                <input type="radio" id="takeAway"
+                       name="visitType" value="Take-away">
+                <label for="takeAway">Take-away</label>
+            </fieldset>
+
+            <!-- Favourite Items -->
+            <fieldset>
+                <legend>Favourite Items:</legend>
+
+                <input type="checkbox" id="burger"
+                       name="favourite" value="Burger">
+                <label for="burger">Burger</label>
+
+                <input type="checkbox" id="rice"
+                       name="favourite" value="Fried Rice">
+                <label for="rice">Fried Rice</label>
+
+                <input type="checkbox" id="drinks"
+                       name="favourite" value="Drinks">
+                <label for="drinks">Drinks</label>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 e-Cafe Campus. All Rights Reserved.</p>
+
+        <address>
+            Contact us:
+            <a href="mailto:ecafe@example.com">
+                ecafe@example.com
+            </a>
+        </address>
+    </footer>
+
+</body>
+</html>

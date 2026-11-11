@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Profile</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .welcome-text {
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            color: #f4c27a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="home">
+        <h1>Welcome to My Website</h1>
+        <p class="welcome-text">
+            Discover more about <span class="highlight">My Personal Profile</span>
+        </p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#video">My Video</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <article>
+                <h3>Introduction</h3>
+
+                <p>
+                    Hello! My name is Fasya. I am a student who
+                    enjoys learning new things and exploring
+                    different experiences.
+
+                    This website is created to introduce myself,
+                    share my interests and hobbies, and provide
+                    a little information about me.
+                </p>
+            </article>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video">
+            <h2>My Favorite Video</h2>
+
+            <figure>
+                <video controls width="100%">
+                    <source
+                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support HTML5 video.
+                </video>
+
+                <figcaption>
+                    Figure 1: A beautiful flower video.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <h2>My Hobbies</h2>
+
+            <article>
+                <p>
+                    Everyone has their own interests and hobbies.
+                    Here are some of my favorite activities:
+                </p>
+
+                <ul>
+                    <li>Listening to music</li>
+                    <li>Watching kdrama</li>
+                    <li>Cafe Hunting</li>
+                    <li>Travelling</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post">
+
+                <!-- Name -->
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <!-- Gender -->
+                <label>Gender:</label>
+
+                <div class="options">
+                    <input type="radio" id="male"
+                           name="gender" value="Male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female"
+                           name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+
+                <!-- Favorite Hobbies -->
+                <label>Favorite Hobbies:</label>
+
+                <div class="options">
+                    <input type="checkbox" id="music"
+                           name="hobbies" value="Music">
+                    <label for="music">Listening to Music</label>
+
+                    <input type="checkbox" id="reading"
+                           name="hobbies" value="Reading">
+                    <label for="reading">Reading</label>
+
+                    <input type="checkbox" id="sports"
+                           name="hobbies" value="Sports">
+                    <label for="sports">Sports</label>
+
+                    <input type="checkbox" id="travelling"
+                           name="hobbies" value="Travelling">
+                    <label for="travelling">Travelling</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Personal Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
