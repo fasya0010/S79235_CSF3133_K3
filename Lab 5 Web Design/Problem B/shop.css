@@ -1,0 +1,143 @@
+
+/* 1. General Page Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    background-image: url("books.jpg.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: #333;
+}
+
+/* 2. Header Styling */
+header {
+    background-image: url("books.jpg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* 3. Navigation Bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+nav li a.active {
+    background-color: #04AA6D;
+}
+
+/* 4. Main Content */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #1B4F72;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 5. Product Table */
+#product {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#product th,
+#product td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+#product th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#product tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#product tr:hover {
+    background-color: #ddd;
+}
+
+/* Align Price Column to the Right */
+#product td:last-child {
+    text-align: right;
+}
+
+/* 6. Footer Styling */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* 7. Responsive Design */
+@media screen and (max-width: 600px) {
+    nav li {
+        float: none;
+    }
+
+    main {
+        width: 95%;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}
